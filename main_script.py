@@ -1,26 +1,26 @@
 import argparse
-from p_acquisition import m_acquisition as mac
-from p_wrangling import m_wrangling as mwr
-from p_analysis import m_analysis as man 
-from p_reporting import m_reporting as mre 
+import pandas as pd
+from package import api_configuration
 
-def argument_parser():
-    parser = argparse.ArgumentParser(description = 'Set chart type')
-    parser.add_argument("-b", "--bar", help="Produce a barplot", action="store_true")
-    parser.add_argument("-l", "--line", help="Produce a lineplot", action="store_true")
-    args = parser.parse_args()
-    return args
 
-def main(some_args):
-    data = mac.acquire()
-    filtered = mwr.wrangle(data, year)
-    results = man.analyze(filtered)
-    fig = mre.plotting_function(results, title, arguments)
-    mre.save_viz(fig, title)
-    print('========================= Pipeline is complete. You may find the results in the folder ./data/results =========================')
+def main(current_location, bank_card):
+    print('\n--- WELCOME TO THE ATM LOCATION FREE ---\n')
+    print(current_location, bank_card)
+    lat, lng = api_configuration.lat_lng_current_location(current_location)
+    data_api = api_configuration.find_atms(lat, lng)
+    comisions = pd.read_excel("./data//raw/comisiones_bancos.xlsx")
+    dict_results = api_configuration.processing(data_api, comisions, bank_card)
+    api_configuration.show_in_the_map(dict_results)
+    print('\n--- THANKS FOR USE FORBES ---\n       HACK-REPORTING')
+
 
 if __name__ == '__main__':
-    year = int(input('Enter the year: '))
-    title = 'Top 10 Manufacturers by Fuel Efficiency ' + str(year)
-    arguments = argument_parser()
-    main(arguments)
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-l", "--current_location", help = "Introduzca una dirección", dest='current_location',
+                        default='Calle Jacinto Benavente 14, Las Rozas, Madrid')
+    parser.add_argument("-c", "--bank_card", help="Introduzca el Banco de su tarjeta", dest='bank_card',
+                        default='santander')
+    args = parser.parse_args()
+    current_location = args.current_location
+    bank_card = args.bank_card
+    main(current_location, bank_card)
