@@ -33,7 +33,7 @@ def rename_f(join):
         return 'Otros'
 
 
-def title_column(df, column):
+def upper_column(df, column):
     df = df.copy()
-    df[column] = df[column].str.title()
-    return df[column]
+    df[column] = df[column].str.upper()
+    return df

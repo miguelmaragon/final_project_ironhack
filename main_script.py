@@ -1,17 +1,17 @@
 import argparse
 import pandas as pd
-from package import api_configuration
+from module import api_configuration
 
 
 def main(current_location, bank_card):
-    print('\n--- WELCOME TO THE ATM LOCATION FREE ---\n')
+    print('\n--- WELCOME TO FREE COMMISSION ATM LOCATION ---\n')
     print(current_location, bank_card)
-    lat, lng = api_configuration.lat_lng_current_location(current_location)
+    lat, lng, lat_current, lng_current = api_configuration.lat_lng_current_location(current_location)
     data_api = api_configuration.find_atms(lat, lng)
-    comisions = pd.read_excel("./data//raw/comisiones_bancos.xlsx")
-    dict_results = api_configuration.processing(data_api, comisions, bank_card)
-    api_configuration.show_in_the_map(dict_results)
-    print('\n--- THANKS FOR USE FORBES ---\n       HACK-REPORTING')
+    commissions = pd.read_excel("./data//raw/comisiones_bancos.xlsx")
+    dict_results, location_atm_free, location_atm_near = api_configuration.processing(data_api, commissions, bank_card)
+    api_configuration.show_in_the_map(dict_results, location_atm_free, location_atm_near, lat_current, lng_current)
+    print('\n--- THANKS FOR FREE COMMISSION ATM LOCATION ---\n')
 
 
 if __name__ == '__main__':
