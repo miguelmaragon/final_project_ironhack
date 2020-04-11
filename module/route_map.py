@@ -19,6 +19,6 @@ def plot_route(start_location, end_location, fig, color, stroke_weight_line, rou
                                       zip(polyline_directions_result, polyline_directions_result[1:])]
     for i in range(len(polyline_directions_result_due)):
         line_drawing = gmaps.Line(start=polyline_directions_result_due[i][0], end=polyline_directions_result_due[i][1],
-                                  stroke_weight=stroke_weight_line, stroke_color=color)
+                                  stroke_weight=stroke_weight_line, stroke_color=color, stroke_opacity=1.0)
         drawing = gmaps.drawing_layer(features=[line_drawing], show_controls=False)
         fig.add_layer(drawing)
