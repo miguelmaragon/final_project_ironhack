@@ -1,53 +1,35 @@
 # Data Project README file
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
-Bearing that in mind, your job is to: 
-- Tell them what it is (with context).
-- Show them what it looks like in action.
-- Show them how they use it.
-- Tell them any other relevant details.
-
-![Image](https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2019/05/aiexcerpt.png)
-
----
-
-## **Formatting**
-Your readers will most likely view your README in a browser so please keep that in mind when formatting its content: 
-- Use proper format when necesary (e.g.: `import pandas as pd`). 
-- Categorize content using two or three levels of header beneath. 
-- Make use of **emphasis** to call out important words. 
-- Link to project pages for related libraries you mention. Link to Wikipedia, Wiktionary, even Urban Dictionary definitions for words of which a reader may not be familiar. Make amusing cultural references. 
-- Add links to related projects or services. 
-
-> Here you have a markdown cheatsheet [Link](https://commonmark.org/help/) and tutorial [Link](https://commonmark.org/help/tutorial/).
-
-
-## **Start writing ASAP:**
-*Last but not least, by writing your README soon you give yourself some pretty significant advantages. Most importantly, you’re giving yourself a chance to think through the project without the overhead of having to change code every time you change your mind about how something should be organized or what should be included.*
-
-
-## **Suggested Structure:**
-
-### :raising_hand: **Name** 
-Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
+### :raising_hand: **FREE FEE ATM** 
 
 ### :baby: **Status**
-Alpha, Beta, 1.1, Ironhack Data Analytics Final Project, etc... It's OK to write a sentence, too. The goal is to let interested people know where this project is at.
+I have done this work as Ironhack Data Analytics Final Project
 
 ### :running: **One-liner**
-Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
+I want to show on a map the location of those ATMs near your address and tell you what commission you will be charged, so you can find the nearest and cheapest ATM.
 
 ### :computer: **Technology stack**
-Python, Pandas, Scipy, Scikit-learn, etc. Indicate the technological nature of the software, including primary programming language(s), main libraries and whether the software is intended as standalone or as a module in a framework or other ecosystem.
+- Programme language: Python
+- 4 Google APIs such as Geocoding or Directions, among others
+- Main libraries like pandas, googlemaps, requests, gmaps and pypeline.
 
 ### :boom: **Core technical concepts and inspiration**
-Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
+ATMs are the main means of obtaining cash: 61% of the total. But there is a big problem, when we withdraw cash they charge us a fee if the ATM is not the one in our entity.
 
-### :wrench: **Configuration**
-Requeriments, prerequisites, dependencies, installation instructions.
+However, the law establishes that the entity that owns a cash dispenser cannot apply a commission to the consumer: only a charge to the bank that owns the plastic and this entity will pass on this commission to its client.
+
+And an important fact, 40% of Spanish businesses do not accept payment by card.
+
+The conclusion is quick, we still need to have cash in our pockets.
+In the mobile applications of the 3 big Spanish banks, they show you where their offices are but... what if I showed you the nearest ATM and what commission it charges? That would be useful, right?
+
+Enter an address, the banks of your cards and the means of transport, and you will get the routes to the ATMs.
 
 ### :see_no_evil: **Usage**
-Parameters, return values, known issues, thrown errors.
+Possible use cases of the application:
+- When you go with your friends to a rural house in an unknown town
+- When you go shopping in an area you don't know and the store doesn't accept card payment.
+- When you go to a sporting event or concert
 
 ### :file_folder: **Folder structure**
 ```
@@ -58,12 +40,15 @@ Parameters, return values, known issues, thrown errors.
     ├── requeriments.txt
     ├── README.md
     ├── main_script.py
+    ├── info
+    ├── reports
     ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
+    │   └── conect_api.ipynb
     ├── module
-    │   ├── module1.py
-    │   └── module2.py
+    │   ├── api_configuration.py
+    │   ├── column_conversion.py
+    │   ├── marker_template.py
+    │   └── route_map.py
     └── data
         ├── raw
         ├── processed
@@ -73,11 +58,17 @@ Parameters, return values, known issues, thrown errors.
 > Do not forget to include `__trash__` and `.env` in `.gitignore` 
 
 ### :shit: **ToDo**
-Next steps, features planned, known bugs (shortlist).
+Possible future jobs are:
+- Taking the solution to an international level.
+- Increase the dataset of the banks.
 
-### :information_source: **Further info**
-Credits, alternatives, references, license.
+### :information_source: **References**
+
+[Link](https://inza.wordpress.com/2017/01/06/comisiones-bancarias-en-los-cajeros-automaticos/)
+
+[link](https://www.iahorro.com/ahorro/noticias/ing_bankinter_ibercaja_kutxabank_y_abanca_las_entidades_con_los_cajeros_mas_baratos.html)
+
 
 ### :love_letter: **Contact info**
-Getting help, getting involved, hire me please.
 
+[Link](www.linkedin.com/in/mmaragon)

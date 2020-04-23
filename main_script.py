@@ -4,7 +4,7 @@ from module import api_configuration
 
 
 def main(current_location, bank_card, route_mode):
-    print('\n--- WELCOME TO FREE COMMISSION ATM LOCATION ---\n')
+    print('\n--- WELCOME TO FREE FEE ATM LOCATION ---\n')
     print('  The process is looking for ATM near these address:\n    '
           + current_location.title()
           + '\n\n  And for the cards: \n    '
@@ -15,7 +15,7 @@ def main(current_location, bank_card, route_mode):
     dict_results, location_atm_free, location_atm_near = api_configuration.processing(data_api, commissions, bank_card)
     api_configuration.show_in_the_map(dict_results, location_atm_free, location_atm_near, lat_current, lng_current,
                                       route_mode)
-    print('\n--- THANKS FOR FREE COMMISSION ATM LOCATION ---\n')
+    print('\n--- THANKS FOR FREE FEE ATM LOCATION ---\n')
 
 
 if __name__ == '__main__':
