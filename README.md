@@ -66,9 +66,9 @@ Possible future jobs are:
 
 [Link](https://inza.wordpress.com/2017/01/06/comisiones-bancarias-en-los-cajeros-automaticos/)
 
-[link](https://www.iahorro.com/ahorro/noticias/ing_bankinter_ibercaja_kutxabank_y_abanca_las_entidades_con_los_cajeros_mas_baratos.html)
+[Link](https://www.iahorro.com/ahorro/noticias/ing_bankinter_ibercaja_kutxabank_y_abanca_las_entidades_con_los_cajeros_mas_baratos.html)
 
 
 ### :love_letter: **Contact info**
 
-[Link](www.linkedin.com/in/mmaragon)
+[Link](https://www.linkedin.com/in/mmaragon/)
